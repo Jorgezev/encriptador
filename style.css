@@ -1,5 +1,9 @@
-body{
+*{
     background: rgb(132, 217, 214);
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
 }
 #encriptador{
     display: flex;   
@@ -13,7 +17,17 @@ body{
 .svg{
     margin: 10px 10px 0 0;
     width: 1%;
+    animation-name: rotar;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
 }
+@keyframes rotar {
+    50%{transform: rotateX(150deg);}
+}
+.svg:hover {
+    animation-play-state: paused;
+  }
 .area-texto{
     /*background: goldenrod;*/
     width: 60%;
@@ -40,23 +54,29 @@ textarea:active{
 .botones{
     margin: 5% 0 0 5%;
 }
-.encriptar, .desencriptar{
+.encriptar, .desencriptar, #boton-copiar{
     width: 45%;
     height: 45px;
-    border-radius: 10px;
+    border-radius: 25px;
     border-style: none;
-}
-.encriptar{
-    background: blue;
-    color: aqua;
-}
-.desencriptar{
     background: gray;
+    color: rgb(132, 217, 214);
 }
-
-.texto-codificado{
+.encriptar:hover, .desencriptar:hover, #boton-copiar:hover{
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;    
+}
+.segundo-panel{
     width: 40%;
-    /*background: skyblue;*/
+}
+#mostrar-texto{
+    width: 80%;
+    background: white;
+    background-image: url(imagenes/Muñeco.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    resize: none;
 }
 .resultado{
     margin: 33px;
@@ -64,14 +84,28 @@ textarea:active{
     height: 90%;
     background: white;
     border-radius: 15px;
+    border: 8px double rgb(132, 217, 214);
+    animation-name: borde;
+    animation-duration: 4s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
 }
-.muneco{
-    width: 80%;
-    margin:10% 0 0 5%;
+@keyframes borde{
+    50% {border: 8px double white;}
 }
-.mensaje{
+
+#boton-copiar{
+    width: 70%;
+    height: 45px;
+    margin-left: 15%;
+    border-radius: 25px;
+    border-style: none;
+    display: none;
+}
+#img-mensaje{
     width: 80%;
-    margin: 10% 0 0 5%;   
+    margin-left: 5%;
+    background: white;
 }
 footer{
     text-align: center;

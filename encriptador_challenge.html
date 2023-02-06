@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    
     <title>Encriptador de Texto.</title>
 </head>
 <body>
@@ -17,20 +21,21 @@
         </section>
         <section class="area-texto">
             <div class="textarea">
-                <textarea placeholder="Ingresa tu texto aquí"></textarea>
+                <textarea id="textarea" placeholder="Ingresa tu texto aquí"></textarea>
             </div>
             <div class="alerta">
                 <img src="imagenes/atencion.svg">
             </div>
             <div class="botones">
-                <input type="button" class="encriptar" value="Encriptar">
-                <input type="button" class="desencriptar" value="Desencriptar">
+                <input type="button" class="encriptar" value="Encriptar" onclick="botonEncriptar()">
+                <input type="button" class="desencriptar" value="Desencriptar" onclick="botonDesencriptar()">
             </div>
         </section>
-        <section class="texto-codificado">
+        <section class="segundo-panel">
             <div class="resultado">
-                <img class="muneco" src="imagenes/Muñeco.svg">
-                <img class="mensaje" src="imagenes/ningun-mensaje.svg">
+                <textarea id="mostrar-texto" readonly></textarea>
+                <img id="img-mensaje" src="imagenes/ningun-mensaje.svg">
+                <button id="boton-copiar" onclick="botonCopiar()">Copiar</button>
             </div>
         </section>
     </main>
@@ -39,5 +44,6 @@
         <a href="https://github.com/jorgezev" target="_blank"><img id="github" src="imagenes/github.svg"></a>   
         <a href="https://www.linkedin.com/in/jorge-zendejas-v" target="_blank"><img id="linkedin" src="imagenes/linkedin.svg"></a>
     </footer>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
