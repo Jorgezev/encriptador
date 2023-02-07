@@ -119,3 +119,11 @@ a{
     width: 40px;
     height: 40px;
 }
+@media screen and (max-width:480px){
+    #encriptador{display: block;
+        align-items: center;}
+    .resultado, .area-texto {width: 250px;}
+    .botones {width: 320px;}
+    .encriptar, .desencriptar, #boton-copiar{font-size: 20px;}
+    footer {width: 100%;}
+}
